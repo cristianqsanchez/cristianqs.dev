@@ -1,0 +1,31 @@
+<script>
+  import { $ } from './helpers/index'
+
+  function initScheme() {
+    const isBrowserSchemeDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    let scheme = isBrowserSchemeDark ? "dark-mode" : "light-mode";
+
+    if (localStorage.getItem("scheme")) {
+      scheme = localStorage.getItem("scheme");
+    }
+    document.documentElement.setAttribute("scheme", scheme);
+  }
+  initScheme();
+
+  $("#emoticon-mode").addEventListener("click", function () {
+    const scheme = document.documentElement.getAttribute("scheme");
+    const isLightMode = scheme === "light-mode";
+
+    document.documentElement.setAttribute(
+      "scheme",
+      isLightMode ? "dark-mode" : "light-mode"
+    );
+
+    localStorage.setItem("scheme", isLightMode ? "dark-mode" : "light-mode");
+  });
+</script>
+
+<a id="emoticon-mode"></a>
