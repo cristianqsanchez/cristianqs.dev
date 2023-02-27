@@ -5,38 +5,40 @@ const navItems = [
   {
     site: "blog",
     url: "/content",
-    target: "_self"
+    target: "_self",
   },
   {
     site: "projects",
-    url: "",
-    target: "_self"
+    url: "#projects",
+    target: "_self",
   },
   {
     site: "github",
     url: "https://github.com/cristianqsanchez",
-    target: "_blank"
+    target: "_blank",
   },
   {
     site: "linkedin",
     url: "https://www.linkedin.com/in/cristianqs",
-    target: "_blank"
+    target: "_blank",
   },
 ];
 ---
 
 <header class="navbar">
-    <a href="/">
-      <img src="/logo.png" alt="cristianqs.dev logo" width="100" height="100" />
-    </a>
+  <a href="/">
+    <img src="/logo.png" alt="cristianqs.dev logo" width="100" height="100" />
+  </a>
   <section class="media">
     {
       navItems.map((item) => (
         <nav>
-          <a href={item.url} target={item.target}>{item.site}</a>
+          <a href={item.url} target={item.target}>
+            {item.site}
+          </a>
         </nav>
       ))
     }
-  <ToggleTheme />
+    <ToggleTheme />
   </section>
 </header>
