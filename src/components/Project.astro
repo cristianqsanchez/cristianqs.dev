@@ -1,0 +1,60 @@
+---
+export interface Props {
+	title: string;
+  img: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body, img } = Astro.props;
+---
+
+<article>
+  <a href={href} target="_blank">
+    <h3>{title}</h3>
+    <img src={img} alt={title}>
+    <p>{body}</p>
+  </a>
+</article>
+
+<style>
+  html[scheme="dark-mode"] a {
+    background: #1c1b22;
+  }
+
+  html[scheme="light-mode"] a {
+    background: #fff;
+  }
+
+  article {
+    background: linear-gradient(90deg, #e54cfd, #ff463e);
+    aspect-ratio: 10/10;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    position: relative;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: 0.3rem;
+    gap: 1rem;
+  }
+
+  article:hover {
+    scale: 1.05;
+    border-radius: 0.3rem;
+  }
+
+  img {
+    border-radius: 1rem;
+    width: 90%;
+  }
+
+  p {
+    width: 90%;
+  }
+</style>
