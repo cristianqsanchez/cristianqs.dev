@@ -1,0 +1,28 @@
+---
+import Project from './Project.astro'
+---
+
+<h2 id="projects">Projects</h2>
+<section>
+  <Project
+    title="Blog-AI"
+    img="/projects/blog-ai.png"
+    href="https://blog-ai-chi.vercel.app/"
+    body="Write posts for your blog with artificial intelligence, made for midudev cohere hackaton"
+  />
+  <Project
+    title="React and Morty"
+    img="/projects/react-and-morty.png"
+    href="https://github.com/cristianqsanchez/React-and-Morty"
+    body="Site made with react to learn how to consume rest APIs "
+  />
+</section>
+
+<style>
+  section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+</style>
