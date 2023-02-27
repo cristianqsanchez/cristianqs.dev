@@ -1,0 +1,29 @@
+---
+ const navItems = [
+  {
+    site: "github",
+    url: "https://github.com/cristianqsanchez",
+  },
+  {
+    site: "linkedin",
+    url: "https://www.linkedin.com/in/cristianqs",
+  },
+  {
+    site: "instagram",
+    url: "https://www.instagram.com/cristianqsanchez_/"
+  },
+  {
+    site: "twitter",
+    url: "https://twitter.com/cristianqsdev"
+  }
+];
+---
+
+
+<footer class="footer">
+  {
+    navItems.map(item => (
+      <a href={item.url} target="_blank">{item.site}</a>
+    ))
+  }
+</footer>
