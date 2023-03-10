@@ -1,4 +1,5 @@
 ---
+import { Img } from "astro-imagetools/components";
 export interface Props {
 	title: string;
   img: string;
@@ -12,7 +13,7 @@ const { href, title, body, img } = Astro.props;
 <article>
   <a href={href} target="_blank">
     <h3>{title}</h3>
-    <img src={img} alt={title} width="200" height="180">
+    <Img src={img} alt={title} width={303} height={180} loading={"lazy"} />
     <p>{body}</p>
   </a>
 </article>
@@ -49,7 +50,7 @@ const { href, title, body, img } = Astro.props;
     border-radius: 0.3rem;
   }
 
-  img {
+  .img {
     border-radius: 1rem;
     width: 90%;
   }
