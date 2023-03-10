@@ -10,7 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.6"
+    "astro": "^2.0.6",
+    "astro-imagetools": "^0.8.1"
   },
   "engines": {
     "node": ">= 18.12.1"
