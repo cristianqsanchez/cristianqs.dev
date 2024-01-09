@@ -1,0 +1,9 @@
+.prettierrc.mjs
+.vscode/extensions.json
+.vscode/launch.json
+astro.config.mjs
+package.json
+README.md
+src/env.d.ts
+tailwind.config.mjs
+tsconfig.json

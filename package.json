@@ -1,7 +1,13 @@
 {
   "name": "cristianqsanchez.dev",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "@astrojs/check": "^0.4.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.1.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,9 +15,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "@astrojs/check": "^0.4.0",
-    "astro": "^4.1.1",
-    "typescript": "^5.3.3"
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3"
   }
 }
