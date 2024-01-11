@@ -1,0 +1,15 @@
+---
+type Props = {
+  to: string
+}
+
+const { to } = Astro.props
+---
+
+<a
+  href={to}
+  target='_blank'
+  class='flex gap-2 items-center bg-neutral-800 rounded-full py-2 px-4 transition-transform hover:scale-110'
+  {...Astro.props}>
+  <slot />
+</a>
