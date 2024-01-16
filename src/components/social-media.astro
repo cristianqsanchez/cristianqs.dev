@@ -1,0 +1,35 @@
+---
+import SocialPill from '@ui/pill.astro'
+import LinkedInIcon from '@icons/linkedin-icon.astro'
+import GitHubIcon from '@icons/github-icon.astro'
+import CvIcon from '@components/icons/cv-icon.astro'
+
+const social = [
+  {
+    media: 'LinkedIn',
+    link: 'https://LinkedIn.com/in/cristianqs',
+    icon: LinkedInIcon,
+  },
+  {
+    media: 'Curriculum',
+    link: 'mailto:cristianquintero316@gmail.com',
+    icon: CvIcon,
+  },
+  {
+    media: 'GitHub',
+    link: 'https://github.com/cristianqsanchez',
+    icon: GitHubIcon,
+  },
+]
+---
+
+<nav class='flex flex-wrap gap-4 mt-2'>
+  {
+    social.map((socialItem) => (
+      <SocialPill to={socialItem.link}>
+        <socialItem.icon class='size-4' />
+        {socialItem.media}
+      </SocialPill>
+    ))
+  }
+</nav>
