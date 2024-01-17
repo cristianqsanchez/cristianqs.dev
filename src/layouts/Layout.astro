@@ -1,0 +1,45 @@
+---
+import '@fontsource/geist-sans/400.css'
+import '@fontsource/geist-sans/500.css'
+import '@fontsource/geist-sans/600.css'
+import '@fontsource/geist-sans/700.css'
+import '@fontsource/geist-sans/800.css'
+import Navbar from '@components/navbar.astro'
+
+interface Props {
+  title: string
+  description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content={description} />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class='grid justify-center min-h-screen min-w-[100dvw] px-8 overflow-x-hidden bg-neutral-950 bg-[radial-gradient(ellipse_100%_100%_at_50%_-80%,rgba(150,150,250,0.7),rgba(255,255,255,0))]'>
+    <Navbar />
+    <slot />
+  </body>
+</html>
+<style is:global>
+  html {
+    font-family: 'Geist Sans', system-ui, sans-serif;
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>
