@@ -1,0 +1,41 @@
+---
+import ExperienceItem from './experience-item.astro'
+
+const EXPERIENCE = [
+  {
+    title: 'Desarrollador Frontend Junior - Pragma Medellín',
+    description:
+      'Responsable de la migración y desarrollo de nuevas características de un portal con tráfico de 34k usuarios mensuales, asegurando un coverage de tests unitarios del 85% en cada uno de los 6 microfrontends del sitio web',
+    date: 'Diciembre 2023',
+  },
+  {
+    title: 'Desarrollador Autodidacta',
+    description:
+      'Desarrollo aplicaciones y productos web abordadas como retos personales o como participaciones con comunidades usando las tecnologías Javascript, React, Tailwind y frameworks como Astro',
+    date: 'Junio 2023',
+  },
+  {
+    title: 'Concurso Nacional de Programación - Fedesoft',
+    description:
+      'Junto a mi colegio participé en un proyecto de realidad aumentada, donde contribuí en la investigación y me familiaricé con la metodología scrum',
+    date: 'Noviembre 2019',
+  },
+]
+---
+
+<section class='mb-16'>
+  <h2 id='experiencia' class='mb-8 text-4xl font-bold'>Experiencia</h2>
+  <ol class='relative border-s border-neutral-400'>
+    {
+      EXPERIENCE.map((item) => (
+        <li class='mb-16 ms-4'>
+          <ExperienceItem
+            title={item.title}
+            description={item.description}
+            date={item.date}
+          />
+        </li>
+      ))
+    }
+  </ol>
+</section>
