@@ -1,0 +1,122 @@
+---
+// TODO ESTO SE DEBE MIGRAR A UN ARCHIVO DE CONSTANTES DONDE TAMBIÉN SE CONFIGURE LA INTERNACIONALIZACIÓN
+import ReactJsIcon from '@icons/reactjs-icon.astro'
+import NextJsIcon from '@icons/nextjs-icon.astro'
+import CssIcon from '@icons/css-icon.astro'
+import HtmlIcon from '@icons/html-icon.astro'
+import JavascriptIcon from '@icons/javascript-icon.astro'
+import TypescriptIcon from '@icons/typescript-icon.astro'
+import TailwindIcon from '@icons/tailwind-icon.astro'
+import ViteJsIcon from '@icons/vitejs-icon.astro'
+import AstroIcon from '@icons/astro-icon.astro'
+
+import Badge from '@ui/badge.astro'
+
+export type Props = {
+  title: string
+  description: string
+  link: string
+  stack: TechStackItem[]
+  image: string
+  class?: string
+}
+
+type TechStackItem = {
+  name: string
+  class?: string
+  icon: (_props: Record<string, any>) => any
+}
+
+export enum TechStack {
+  Astro = 'Astro',
+  NEXT = 'NextJS',
+  REACT = 'ReactJS',
+  TYPESCRIPT = 'TypeScript',
+  JAVASCRIPT = 'JavaScript',
+  VITE = 'ViteJS',
+  HTML = 'HTML',
+  CSS = 'CSS',
+  TAILWIND = 'TailwindCSS',
+}
+
+type TechStackItems = {
+  [techStackItem in TechStack]: TechStackItem
+}
+
+export const TECH_STACK: TechStackItems = {
+  [TechStack.REACT]: {
+    name: 'ReactJS',
+    class: 'bg-neutral-900',
+    icon: ReactJsIcon,
+  },
+  [TechStack.NEXT]: {
+    name: 'NextJS',
+    class: 'bg-black',
+    icon: NextJsIcon,
+  },
+  [TechStack.TYPESCRIPT]: {
+    name: '',
+    class: '',
+    icon: TypescriptIcon,
+  },
+  [TechStack.JAVASCRIPT]: {
+    name: '',
+    class: '',
+    icon: JavascriptIcon,
+  },
+  [TechStack.VITE]: {
+    name: 'ViteJS',
+    class: 'bg-neutral-900',
+    icon: ViteJsIcon,
+  },
+  [TechStack.HTML]: {
+    name: '',
+    class: '',
+    icon: HtmlIcon,
+  },
+  [TechStack.CSS]: {
+    name: 'CSS',
+    class: 'bg-neutral-900',
+    icon: CssIcon,
+  },
+  [TechStack.TAILWIND]: {
+    name: 'TailwindCSS',
+    class: 'bg-neutral-900',
+    icon: TailwindIcon,
+  },
+  [TechStack.Astro]: {
+    name: 'Astro',
+    class: 'bg-neutral-900',
+    icon: AstroIcon,
+  },
+}
+
+const { title, description, stack, image, link } = Astro.props
+---
+
+<article
+  class={`${Astro.props.class} col-span-10 relative transition-transform p-4 hover:scale-[1.02] group duration-500 hover:duration-500`}>
+  <a href={link} target='_blank' rel='noopener'>
+    <h3 class='text-2xl font-semibold'>{title}</h3>
+    <p class='text-pretty text-neutral-300'>{description}</p>
+    <ul class='flex flex-wrap gap-2 my-3'>
+      {
+        stack.map((stackItem) => (
+          <li>
+            <Badge title={stackItem.name} class:list={stackItem.class}>
+              <stackItem.icon class='size-5' />
+            </Badge>
+          </li>
+        ))
+      }
+    </ul>
+    <img
+      class='absolute top-0 left-0 object-cover transition-all duration-500 size-full -z-10 opacity-5 rounded-2xl group-hover:opacity-10 group-hover:duration-500]'
+      src={image}
+      alt={`Captura de pantalla del proyecto ${title}`}
+      loading='lazy'
+      width='300'
+      height='150'
+    />
+  </a>
+</article>
