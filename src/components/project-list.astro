@@ -1,0 +1,72 @@
+---
+import Project, { TECH_STACK } from './project.astro'
+
+const { ReactJS, ViteJS, CSS, Astro: AstroFrameWork, TailwindCSS } = TECH_STACK
+
+const PROJECTS = [
+  {
+    title: 'React Shopping Cart',
+    description:
+      'Carrito de compras con filtros de precio y categoría para una tienda de productos',
+    image: '/projects/react-shopping-cart.webp',
+    link: 'https://cristian-react-shopping-cart.surge.sh/',
+    stack: [ReactJS, ViteJS, CSS],
+    class: 'md:col-span-4',
+  },
+  {
+    title: 'Movie Finder',
+    description: 'Buscador de películas íncreíble',
+    image: '/projects/movie-finder.webp',
+    link: 'https://cristianqsanchez.github.io/movie-finder/',
+    stack: [ReactJS, ViteJS, CSS],
+    class: 'md:col-span-6',
+  },
+  {
+    title: 'Blog - AI',
+    description:
+      'Crea posts para tu blog con inteligencia artificial - Proyecto para participar en la hackaton de Cohere con Midudev',
+    image: '/projects/blog-ai.webp',
+    link: 'https://blog-ai-chi.vercel.app/',
+    stack: [AstroFrameWork, ReactJS, TailwindCSS],
+    class: 'md:col-span-10',
+  },
+  {
+    title: 'React & Morty',
+    description:
+      'szs este es otro proyecto de los miles que le hacen fetch a la api de rick y morty y muestra la lista de personajes',
+    image: '/projects/react-shopping-cart.webp',
+    link: 'https://github.com/cristianqsanchez/React-and-Morty',
+    stack: [ViteJS, ReactJS, TailwindCSS],
+    class: 'md:col-span-6',
+  },
+  {
+    title: 'ToDo App',
+    description:
+      'el mitico crud que todos hacen para aprender fullstack, ni siquiera está terminado',
+    image: '/projects/react-shopping-cart.webp',
+    link: 'https://github.com/cristianqsanchez/todo-app',
+    stack: [ViteJS, ReactJS, TailwindCSS],
+    class: 'md:col-span-4',
+  },
+]
+---
+
+<section class='mb-32'>
+  <h2 id='proyectos' class='text-4xl font-bold mb-8'>Proyectos</h2>
+  <div class='grid grid-cols-10 gap-4'>
+    {
+      PROJECTS.map(
+        ({ title, description, image, link, stack, class: style }) => (
+          <Project
+            class={style}
+            title={title}
+            description={description}
+            image={image}
+            link={link}
+            stack={stack}
+          />
+        ),
+      )
+    }
+  </div>
+</section>
