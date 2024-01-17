@@ -7,6 +7,7 @@ export default {
   jsxSingleQuote: true,
   printWidth: 80,
   htmlWhitespaceSensitivity: "strict",
+  semi: false,
   proseWrap: "always",
   plugins: ['prettier-plugin-astro'],
   overrides: [
