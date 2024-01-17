@@ -1,5 +1,6 @@
 ---
 import ExperienceItem from './experience-item.astro'
+import BriefCaseIcon from './icons/briefcase-icon.astro'
 
 const EXPERIENCE = [
   {
@@ -24,7 +25,9 @@ const EXPERIENCE = [
 ---
 
 <section class='mb-16'>
-  <h2 id='experiencia' class='mb-8 text-4xl font-bold'>Experiencia</h2>
+  <h2 id='experiencia' class='flex gap-4 items-center mb-8 text-4xl font-bold'
+    ><BriefCaseIcon class='size-8' /> Experiencia</h2
+  >
   <ol class='relative border-s border-neutral-400'>
     {
       EXPERIENCE.map((item) => (

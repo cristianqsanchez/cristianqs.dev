@@ -1,5 +1,6 @@
 ---
 import Project, { TECH_STACK } from './project.astro'
+import CodeIcon from './icons/code-icon.astro'
 
 const { ReactJS, ViteJS, CSS, Astro: AstroFrameWork, TailwindCSS } = TECH_STACK
 
@@ -52,7 +53,9 @@ const PROJECTS = [
 ---
 
 <section class='mb-32'>
-  <h2 id='proyectos' class='text-4xl font-bold mb-8'>Proyectos</h2>
+  <h2 id='proyectos' class='flex gap-4 items-center mb-8 text-4xl font-bold'
+    ><CodeIcon class='size-8' /> Proyectos</h2
+  >
   <div class='grid grid-cols-10 gap-4'>
     {
       PROJECTS.map(
