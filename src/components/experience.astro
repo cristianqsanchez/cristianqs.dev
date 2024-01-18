@@ -1,32 +1,37 @@
 ---
+import { getI18N } from 'src/i18n'
 import ExperienceItem from './experience-item.astro'
 import BriefCaseIcon from './icons/briefcase-icon.astro'
 
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const experience = i18n?.EXPERIENCE
+
 const EXPERIENCE = [
   {
-    title: 'Desarrollador Frontend Junior - Pragma Medellín',
-    description:
-      'Responsable de la migración y desarrollo de nuevas características de un portal con tráfico de 34k usuarios mensuales, asegurando un coverage de tests unitarios del 85% en cada uno de los 6 microfrontends del sitio web',
-    date: 'Diciembre 2023',
+    title: experience?.PRAGMA.TITLE,
+    description: experience?.PRAGMA.DESCRIPTION,
+    date: experience?.PRAGMA.DATE,
   },
   {
-    title: 'Desarrollador Autodidacta',
-    description:
-      'Desarrollo aplicaciones y productos web abordadas como retos personales o como participaciones con comunidades usando las tecnologías Javascript, React, Tailwind y frameworks como Astro',
-    date: 'Junio 2023',
+    title: experience?.SELFTAUGHT_DEVELOPER.TITLE,
+    description: experience?.SELFTAUGHT_DEVELOPER.DESCRIPTION,
+    date: experience?.SELFTAUGHT_DEVELOPER.DATE,
   },
   {
-    title: 'Concurso Nacional de Programación - Fedesoft',
-    description:
-      'Junto a mi colegio participé en un proyecto de realidad aumentada, donde contribuí en la investigación y me familiaricé con la metodología scrum',
-    date: 'Noviembre 2019',
+    title: experience?.NATIONAL_PROGRAMMING_CONTEST.TITLE,
+    description: experience?.NATIONAL_PROGRAMMING_CONTEST.DESCRIPTION,
+    date: experience?.NATIONAL_PROGRAMMING_CONTEST.DATE,
   },
 ]
 ---
 
 <section class='mb-16'>
-  <h2 id='experiencia' class='flex gap-4 items-center mb-8 text-4xl font-bold'
-    ><BriefCaseIcon class='size-8' /> Experiencia</h2
+  <h2
+    id={experience?.SECTION_ID}
+    class='flex gap-4 items-center mb-8 text-4xl font-bold'
+    ><BriefCaseIcon class='size-8' />{experience?.SECTION_TITLE}</h2
   >
   <ol class='relative border-s border-neutral-400'>
     {

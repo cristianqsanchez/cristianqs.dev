@@ -5,23 +5,28 @@ import SocialMedia from '@components/social-media.astro'
 import ProjectList from '@components/project-list.astro'
 import EmailContact from '@components/email-contact.astro'
 import AboutMe from '@components/about-me.astro'
+import { getI18N } from 'src/i18n'
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale})
+
+const main = i18n?.MAIN
 ---
 
 <Layout
-  title='Cristian Quintero - Portafolio y Experiencia como Desarrollador Web'
-  description='Explora el portafolio de Cristian Quintero, descubre sus habilidades en el desarrollo web, la creación de aplicaciones y sitios web interactivos con un enfoque en el usuario y un compromiso con la calidad'>
+  title={main?.WEB_TITLE}
+  description={main?.WEB_DESCRIPTION}>
   <main class='grid place-content-center max-w-prose m-8 md:m-0'>
     <section class='grid min-h-dvh place-content-center'>
       <h1 class='text-5xl font-extrabold'
-        >Hola, soy <span
+        >{i18n?.MAIN.PRESENTATION}<span
           class='bg-gradient-to-b from-sky-600 via-sky-300 to-white inline-block text-transparent bg-clip-text'
           >Cristian
         </span></h1
       >
-      <h2 class='mb-4 text-3xl font-bold'> Desarrollador Frontend</h2>
+      <h2 class='mb-4 text-3xl font-bold'>{i18n?.MAIN.ROLE}</h2>
       <p class='mb-4 text-xl text-pretty opacity-75'>
-        +1 año de experiencia desarrollando aplicaciones y sitios web increíbles
-        desde Medellín, Colombia.
+        {i18n?.MAIN.DESCRIPTION}
       </p>
       <SocialMedia />
       <EmailContact />

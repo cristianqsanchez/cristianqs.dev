@@ -1,23 +1,24 @@
 ---
+import { getI18N } from 'src/i18n'
 import SearchIcon from './icons/search-icon.astro'
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const aboutMe = i18n?.ABOUT_ME
 ---
 
 <section class='mb-48 [&>p]:text-neutral-200 [&>p]:mb-4'>
-  <h2 id='sobre-mi' class='flex gap-4 items-center mb-8 text-4xl font-bold'
-    ><SearchIcon class='size-8' /> Sobre mí</h2
+  <h2 id={aboutMe?.SECTION_ID} class='flex gap-4 items-center mb-8 text-4xl font-bold'
+    ><SearchIcon class='size-8' />{aboutMe?.SECTION_TITLE}</h2
   >
   <p>
-    Dí mis primeros pasos en la programación en 2019 cuando aún estaba en el
-    colegio, en 2021 después de graduarme enfoqué mis pasos hacia el desarrollo
-    web
+    {aboutMe?.ABOUT_1}
   </p>
   <p>
-    En 2023 conseguí mi primer empleo como desarrollador en una empresa de gran
-    nivel en Colombia y en donde tuve la oportunidad de trabajar con un cliente
-    internacional
+    {aboutMe?.ABOUT_2}
   </p>
   <p>
-    Me gusta jugar ajedrez, resolver cubos de rubik y escuchar un montón de
-    musica poco frecuente en personas de mi edad
+    {aboutMe?.ABOUT_3}
   </p>
 </section>

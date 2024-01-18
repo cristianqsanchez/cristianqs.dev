@@ -1,14 +1,19 @@
 ---
 import Project, { TECH_STACK } from './project.astro'
 import CodeIcon from './icons/code-icon.astro'
+import { getI18N } from 'src/i18n'
 
 const { ReactJS, ViteJS, CSS, Astro: AstroFrameWork, TailwindCSS } = TECH_STACK
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const projects = i18n?.PROJECTS
 
 const PROJECTS = [
   {
     title: 'React Shopping Cart',
-    description:
-      'Carrito de compras con filtros de precio y categoría para una tienda de productos',
+    description: projects?.REACT_SHOPPING_CART.DESCRIPTION,
     image: '/projects/react-shopping-cart.webp',
     link: 'https://cristian-react-shopping-cart.surge.sh/',
     stack: [ReactJS, ViteJS, CSS],
@@ -16,7 +21,7 @@ const PROJECTS = [
   },
   {
     title: 'Movie Finder',
-    description: 'Buscador de películas íncreíble',
+    description: projects?.MOVIE_FINDER.DESCRIPTION,
     image: '/projects/movie-finder.webp',
     link: 'https://cristianqsanchez.github.io/movie-finder/',
     stack: [ReactJS, ViteJS, CSS],
@@ -24,8 +29,7 @@ const PROJECTS = [
   },
   {
     title: 'Blog - AI',
-    description:
-      'Crea posts para tu blog con inteligencia artificial - Proyecto para participar en la hackaton de Cohere con Midudev',
+    description: projects?.BLOG_AI.DESCRIPTION,
     image: '/projects/blog-ai.webp',
     link: 'https://blog-ai-chi.vercel.app/',
     stack: [AstroFrameWork, ReactJS, TailwindCSS],
@@ -53,8 +57,10 @@ const PROJECTS = [
 ---
 
 <section class='mb-32'>
-  <h2 id='proyectos' class='flex gap-4 items-center mb-8 text-4xl font-bold'
-    ><CodeIcon class='size-8' /> Proyectos</h2
+  <h2
+    id={projects?.SECTION_ID}
+    class='flex gap-4 items-center mb-8 text-4xl font-bold'
+    ><CodeIcon class='size-8' />{projects?.SECTION_TITLE}</h2
   >
   <div class='grid grid-cols-10 gap-4'>
     {

@@ -1,5 +1,11 @@
 ---
+import { getI18N } from 'src/i18n'
 import CopyIcon from './icons/copy-icon.astro'
+
+const {currentLocale} = Astro
+const i18n = getI18N({currentLocale})
+
+const main = i18n?.MAIN
 ---
 
 <script>
@@ -15,7 +21,7 @@ import CopyIcon from './icons/copy-icon.astro'
 
 <button
   id='copy-button'
-  aria-label='Copiar al portapapeles'
+  aria-label={main?.ARIA_COPY_EMAIL}
   class='bg-inherit py-3.5 pl-2 pr-2 group'>
   <CopyIcon
     class='opacity-50 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300'
