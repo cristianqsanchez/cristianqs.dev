@@ -1,21 +1,27 @@
 ---
+import { getI18N } from "src/i18n"
+import LanguageSelector from "./language-selector.astro"
+
 type NavItem = {
-  name: string
-  reference: string
+  name?: string
+  reference?: string
 }
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 
 const NAV_ITEMS: NavItem[] = [
   {
-    name: 'Experiencia',
-    reference: '#experiencia',
+    name: i18n?.EXPERIENCE.SECTION_TITLE,
+    reference: `#${i18n?.EXPERIENCE.SECTION_ID}`,
   },
   {
-    name: 'Proyectos',
-    reference: '#proyectos',
+    name: i18n?.PROJECTS.SECTION_TITLE,
+    reference: `#${i18n?.PROJECTS.SECTION_ID}`,
   },
   {
-    name: 'Sobre mí',
-    reference: '#sobre-mi',
+    name: i18n?.ABOUT_ME.SECTION_TITLE,
+    reference: `#${i18n?.ABOUT_ME.SECTION_ID}`,
   },
   {
     name: 'Blog',
@@ -24,7 +30,7 @@ const NAV_ITEMS: NavItem[] = [
 ]
 ---
 
-<header class='flex justify-center py-5 z-10 sticky top-0 md:mx-auto'>
+<header class='flex flex-wrap items-center justify-center gap-4 py-5 z-10 sticky top-0 md:mx-auto'>
   <nav
     class='flex flex-1 justify-evenly items-center bg-neutral-900 rounded-2xl py-2 px-4'>
     {
@@ -37,4 +43,5 @@ const NAV_ITEMS: NavItem[] = [
       ))
     }
   </nav>
+  <LanguageSelector />
 </header>
