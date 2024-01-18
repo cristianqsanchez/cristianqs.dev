@@ -1,0 +1,50 @@
+{
+  "MAIN": {
+    "PRESENTATION": "Hola, soy ",
+    "ROLE": "Desarrollador Frontend",
+    "DESCRIPTION": "+1 año de experiencia desarrollando aplicaciones y sitios web increíbles desde Medellín, Colombia.",
+    "WEB_TITLE": "Cristian Quintero - Portafolio y Experiencia como Desarrollador Web",
+    "WEB_DESCRIPTION": "Explora el portafolio de Cristian Quintero, descubre sus habilidades en el desarrollo web, la creación de aplicaciones y sitios web interactivos con un enfoque en el usuario y un compromiso con la calidad",
+    "ARIA_COPY_EMAIL": "Copiar e-mail al portapapeles",
+    "ARIA_SEND_EMAIL": "Enviar un e-mail"
+  },
+  "EXPERIENCE": {
+    "SECTION_ID": "experiencia",
+    "SECTION_TITLE": "Experiencia",
+    "PRAGMA": {
+      "TITLE": "Desarrollador Frontend Junior - Pragma Medellín",
+      "DESCRIPTION": "Responsable de la migración y desarrollo de nuevas características de un portal con tráfico de 34k usuarios mensuales, asegurando un coverage de tests unitarios del 85% en cada uno de los 6 microfrontends del sitio web",
+      "DATE": "Diciembre 2023"
+    },
+    "SELFTAUGHT_DEVELOPER": {
+      "TITLE": "Desarrollador Autodidacta",
+      "DESCRIPTION": "Desarrollo aplicaciones y productos web abordadas como retos personales o como participaciones con comunidades usando las tecnologías Javascript, React, Tailwind y frameworks como Astro",
+      "DATE": "Junio 2023"
+    },
+    "NATIONAL_PROGRAMMING_CONTEST": {
+      "TITLE": "Concurso Nacional de Programación - Fedesoft",
+      "DESCRIPTION": "Junto a mi colegio participé en un proyecto de realidad aumentada, donde contribuí en la investigación y me familiaricé con la metodología scrum",
+      "DATE": "Noviembre 2019"
+    }
+  },
+  "PROJECTS": {
+    "SECTION_ID": "proyectos",
+    "SECTION_TITLE": "Proyectos",
+    "REACT_SHOPPING_CART": {
+      "DESCRIPTION": "Carrito de compras con filtros de precio  categoría para una tienda de productos"
+    },
+    "MOVIE_FINDER": {
+      "DESCRIPTION": "Buscador de peliculas increíble"
+    },
+    "BLOG_AI": {
+      "DESCRIPTION": "Crea posts para tu blog con inteligencia artificial - Proyecto para participar en la hackaton de Cohere con Midudev"
+    }
+  },
+  "ABOUT_ME": {
+    "SECTION_ID": "sobre-mi",
+    "SECTION_TITLE": "Sobre mí",
+    "ABOUT_1": "Dí mis primeros pasos en la programación en 2019 cuando aún estaba en el colegio, en 2021 después de graduarme enfoqué mis pasos hacia el desarrollo web",
+    "ABOUT_2": "En 2023 conseguí mi primer empleo como desarrollador en una empresa de gran nivel en Colombia y en donde tuve la oportunidad de trabajar con un cliente internacional",
+    "ABOUT_3": "Me gusta jugar ajedrez, resolver cubos de rubik y escuchar un montón de musica poco frecuente en personas de mi edad"
+  }
+}

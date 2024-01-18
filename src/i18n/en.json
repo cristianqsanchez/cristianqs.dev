@@ -1,0 +1,50 @@
+{
+  "MAIN": {
+    "PRESENTATION": "Hi, I'm ",
+    "ROLE": "Frontend Developer",
+    "DESCRIPTION": "+1 year of experience developing amazing applications and websites from Medellin, Colombia.",
+    "WEB_TITLE": "Cristian Quintero - Portfolio and Experience as a Web Developer",
+    "WEB_DESCRIPTION": "Explore Cristian Quintero's portfolio, discover his skills in web development, the creation of interactive applications and websites with a user-centric approach, and a commitment to quality.",
+    "ARIA_COPY_EMAIL": "Copy email to clipboard",
+    "ARIA_SEND_EMAIL": "Send an email"
+  },
+  "EXPERIENCE": {
+    "SECTION_ID": "experience",
+    "SECTION_TITLE": "Experience",
+    "PRAGMA": {
+      "TITLE": "Junior Frontend Developer - Pragma Medellin",
+      "DESCRIPTION": "Responsible for migration and development of new features for a portal with 34k monthly users, ensuring 85% unit test coverage in each of the 6 microfrontends of the website",
+      "DATE": "December 2023"
+    },
+    "SELFTAUGHT_DEVELOPER": {
+      "TITLE": "Self-taught Developer",
+      "DESCRIPTION": "Develop applications and web products tackled as personal challenges or community collaborations using technologies like Javascript, React, Tailwind, and frameworks like Astro",
+      "DATE": "June 2023"
+    },
+    "NATIONAL_PROGRAMMING_CONTEST": {
+      "TITLE": "National Programming Contest - Fedesoft",
+      "DESCRIPTION": "Participated with my school in an augmented reality project, where I contributed to research and familiarized myself with the scrum methodology",
+      "DATE": "November 2019"
+    }
+  },
+  "PROJECTS": {
+    "SECTION_ID": "projects",
+    "SECTION_TITLE": "Projects",
+    "REACT_SHOPPING_CART": {
+      "DESCRIPTION": "Shopping cart with price filters for a product store"
+    },
+    "MOVIE_FINDER": {
+      "DESCRIPTION": "Incredible movie finder"
+    },
+    "BLOG_AI": {
+      "DESCRIPTION": "Create blog posts with artificial intelligence - Project to participate in the Cohere hackathon with Midudev"
+    }
+  },
+  "ABOUT_ME": {
+    "SECTION_ID": "about-me",
+    "SECTION_TITLE": "About Me",
+    "ABOUT_1": "Took my first steps in programming in 2019 while still in school; in 2021, after graduating, I focused on web development",
+    "ABOUT_2": "In 2023, secured my first job as a developer in a high-level company in Colombia, where I had the opportunity to work with an international client",
+    "ABOUT_3": "I enjoy playing chess, solving Rubik's cubes, and listening to a lot of uncommon music for people of my age"
+  }
+}
