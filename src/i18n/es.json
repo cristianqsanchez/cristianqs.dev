@@ -6,7 +6,9 @@
     "WEB_TITLE": "Cristian Quintero - Portafolio y Experiencia como Desarrollador Web",
     "WEB_DESCRIPTION": "Explora el portafolio de Cristian Quintero, descubre sus habilidades en el desarrollo web, la creación de aplicaciones y sitios web interactivos con un enfoque en el usuario y un compromiso con la calidad",
     "ARIA_COPY_EMAIL": "Copiar e-mail al portapapeles",
-    "ARIA_SEND_EMAIL": "Enviar un e-mail"
+    "ARIA_SEND_EMAIL": "Enviar un e-mail",
+    "SITE_URL": "https://portafolio-del-goat.surge.sh/",
+    "OG_IMAGE_URL": "og-image-es.webp"
   },
   "EXPERIENCE": {
     "SECTION_ID": "experiencia",
