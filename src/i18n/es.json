@@ -32,6 +32,8 @@
   "PROJECTS": {
     "SECTION_ID": "proyectos",
     "SECTION_TITLE": "Proyectos",
+    "PROJECT_MESSAGE": "Visita el proyecto",
+    "PROJECT_ALT": "Captura de pantalla del proyecto",
     "REACT_SHOPPING_CART": {
       "DESCRIPTION": "Carrito de compras con filtros de precio  categoría para una tienda de productos"
     },

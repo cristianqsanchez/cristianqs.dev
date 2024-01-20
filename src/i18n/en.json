@@ -32,6 +32,8 @@
   "PROJECTS": {
     "SECTION_ID": "projects",
     "SECTION_TITLE": "Projects",
+    "PROJECT_MESSAGE": "Visit the project",
+    "PROJECT_ALT": "Screenshot of the project",
     "REACT_SHOPPING_CART": {
       "DESCRIPTION": "Shopping cart with price filters for a product store"
     },
