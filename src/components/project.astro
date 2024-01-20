@@ -11,6 +11,7 @@ import ViteJsIcon from '@icons/vitejs-icon.astro'
 import AstroIcon from '@icons/astro-icon.astro'
 
 import Badge from '@ui/badge.astro'
+import { getI18N } from 'src/i18n'
 
 export type Props = {
   title: string
@@ -92,11 +93,20 @@ export const TECH_STACK: TechStackItems = {
 }
 
 const { title, description, stack, image, link } = Astro.props
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const projects = i18n?.PROJECTS
 ---
 
 <article
   class={`${Astro.props.class} col-span-10 relative transition-transform p-4 hover:scale-[1.02] group duration-500 hover:duration-500`}>
-  <a href={link} target='_blank' rel='noopener'>
+  <a
+    href={link}
+    target='_blank'
+    rel='noopener'
+    title={`${projects?.PROJECT_MESSAGE} ${title}`}>
     <h3 class='text-2xl font-semibold'>{title}</h3>
     <p class='text-pretty text-neutral-300'>{description}</p>
     <ul class='flex flex-wrap gap-2 my-3'>
@@ -113,7 +123,7 @@ const { title, description, stack, image, link } = Astro.props
     <img
       class='absolute top-0 left-0 object-cover transition-all duration-500 size-full -z-10 opacity-5 rounded-2xl group-hover:opacity-10 group-hover:duration-500]'
       src={image}
-      alt={`Captura de pantalla del proyecto ${title}`}
+      alt={`${projects?.PROJECT_ALT} ${title}`}
       loading='lazy'
       width='300'
       height='150'
