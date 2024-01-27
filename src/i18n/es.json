@@ -7,7 +7,7 @@
     "WEB_DESCRIPTION": "Explora el portafolio de Cristian Quintero, descubre sus habilidades en el desarrollo web, la creación de aplicaciones y sitios web interactivos con un enfoque en el usuario y un compromiso con la calidad",
     "ARIA_COPY_EMAIL": "Copiar e-mail al portapapeles",
     "ARIA_SEND_EMAIL": "Enviar un e-mail",
-    "SITE_URL": "https://portafolio-del-goat.surge.sh/",
+    "SITE_URL": "https://cristianqs-dev.vercel.app/",
     "OG_IMAGE_URL": "og-image-es.webp"
   },
   "EXPERIENCE": {
@@ -15,7 +15,7 @@
     "SECTION_TITLE": "Experiencia",
     "PRAGMA": {
       "TITLE": "Desarrollador Frontend Junior - Pragma Medellín",
-      "DESCRIPTION": "Responsable de la migración y desarrollo de nuevas características de un portal con tráfico de 34k usuarios mensuales, asegurando un coverage de tests unitarios del 85% en cada uno de los 6 microfrontends del sitio web",
+      "DESCRIPTION": "Responsable de la migración y desarrollo de nuevas características de un portal web con tráfico de 34k usuarios mensuales, asegurando un coverage de tests unitarios del 85% en cada uno de los 6 microfrontends del sitio web",
       "DATE": "Diciembre 2023"
     },
     "SELFTAUGHT_DEVELOPER": {
@@ -47,8 +47,8 @@
   "ABOUT_ME": {
     "SECTION_ID": "sobre-mi",
     "SECTION_TITLE": "Sobre mí",
-    "ABOUT_1": "Dí mis primeros pasos en la programación en 2019 cuando aún estaba en el colegio, en 2021 después de graduarme enfoqué mis pasos hacia el desarrollo web",
-    "ABOUT_2": "En 2023 conseguí mi primer empleo como desarrollador en una empresa de gran nivel en Colombia y en donde tuve la oportunidad de trabajar con un cliente internacional",
-    "ABOUT_3": "Me gusta jugar ajedrez, resolver cubos de rubik y escuchar un montón de musica poco frecuente en personas de mi edad"
+    "ABOUT_1": "Dí mis primeros pasos en la programación en 2019 cuando aún estaba en el colegio, en 2021 después de graduarme enfoqué mis pasos hacia el desarrollo web.",
+    "ABOUT_2": "En 2023 conseguí mi primer empleo como desarrollador en una empresa de gran nivel en Colombia, donde contribuí en varios proyectos, aprendí de personas increíbles y tuve la oportunidad de trabajar con un cliente internacional.",
+    "ABOUT_3": "Mi objetivo es continuar creciendo en el mundo del desarrollo web, enfrentar nuevos retos que me permitan desplegar mi creatividad y compartir conocimiento con los demás, desarrollando y divulgando en la comunidad hispana."
   }
 }
