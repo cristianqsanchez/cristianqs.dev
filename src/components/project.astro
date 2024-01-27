@@ -18,7 +18,7 @@ export type Props = {
   description?: string
   link: string
   stack: TechStackItem[]
-  image: string
+  image?: string
   class?: string
 }
 
@@ -120,13 +120,19 @@ const projects = i18n?.PROJECTS
         ))
       }
     </ul>
-    <img
-      class='absolute top-0 left-0 object-cover transition-all duration-500 size-full -z-10 opacity-5 rounded-2xl group-hover:opacity-10 group-hover:duration-500]'
-      src={image}
-      alt={`${projects?.PROJECT_ALT} ${title}`}
-      loading='lazy'
-      width='300'
-      height='150'
-    />
+    {
+      image ? (
+        <img
+          class='absolute top-0 left-0 object-cover transition-all duration-500 size-full -z-10 opacity-5 rounded-2xl group-hover:opacity-10 group-hover:duration-500]'
+          src={image}
+          alt={`${projects?.PROJECT_ALT} ${title}`}
+          loading='lazy'
+          width='300'
+          height='150'
+        />
+      ) : (
+        <div class='absolute top-0 left-0 bg-neutral-900 size-full opacity-10 -z-10 rounded-2xl transition-all group-hover:opacity-20' />
+      )
+    }
   </a>
 </article>
