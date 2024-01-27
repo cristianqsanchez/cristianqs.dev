@@ -38,10 +38,16 @@
       "DESCRIPTION": "Carrito de compras con filtros de precio  categoría para una tienda de productos"
     },
     "MOVIE_FINDER": {
-      "DESCRIPTION": "Buscador de peliculas increíble"
+      "DESCRIPTION": "Busca tus peliculas favoritas en este buscador de peliculas en tiempo real"
     },
     "BLOG_AI": {
       "DESCRIPTION": "Crea posts para tu blog con inteligencia artificial - Proyecto para participar en la hackaton de Cohere con Midudev"
+    },
+    "REACT_AND_MORTY": {
+      "DESCRIPTION": "Todos los personajes de Ricky y Morty en todas las temporadas de Rick y Morty, así aprendí a interactuar con REST API's"
+    },
+    "TODO_APP": {
+      "DESCRIPTION": "Creas tareas, ves tus tareas, actualizas tus tareas o inclúso eliminalas"
     }
   },
   "ABOUT_ME": {
