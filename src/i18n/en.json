@@ -38,10 +38,16 @@
       "DESCRIPTION": "Shopping cart with price and category filters for a product store."
     },
     "MOVIE_FINDER": {
-      "DESCRIPTION": "Incredible movie finder."
+      "DESCRIPTION": "Search for your favorite movies on this real-time movie search engine."
     },
     "BLOG_AI": {
       "DESCRIPTION": "Create posts for your blog with artificial intelligence - Project to participate in the Cohere hackathon with Midudev."
+    },
+    "REACT_AND_MORTY": {
+      "DESCRIPTION": "Every character from Rick & Morty across all seasons of Rick & Morty, that's how I learned to interact with REST APIs."
+    },
+    "TODO_APP": {
+      "DESCRIPTION": "Create tasks, view your tasks, update your tasks, or even delete them."
     }
   },
   "ABOUT_ME": {
