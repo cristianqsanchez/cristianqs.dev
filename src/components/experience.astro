@@ -1,18 +1,22 @@
 ---
 import { getI18N } from 'src/i18n'
 import ExperienceItem from './experience-item.astro'
-import BriefCaseIcon from './icons/briefcase-icon.astro'
+import BriefCaseIcon from '@icons/briefcase-icon.astro'
+import { TECH_STACK } from 'src/utils/technologies'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 
 const experience = i18n?.EXPERIENCE
 
+const { NextJS, TypeScript } = TECH_STACK
+
 const EXPERIENCE = [
   {
     title: experience?.PRAGMA.TITLE,
     description: experience?.PRAGMA.DESCRIPTION,
     date: experience?.PRAGMA.DATE,
+    stack: [NextJS, TypeScript]
   },
   {
     title: experience?.SELFTAUGHT_DEVELOPER.TITLE,
@@ -41,6 +45,7 @@ const EXPERIENCE = [
             title={item.title}
             description={item.description}
             date={item.date}
+            stack={item.stack}
           />
         </li>
       ))
