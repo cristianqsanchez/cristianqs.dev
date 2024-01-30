@@ -1,20 +1,33 @@
 ---
+import type { TechStackItem } from 'src/utils/technologies'
+import Badge from '@ui/badge.astro'
+
 type Props = {
   title?: string
   description?: string
   date?: string
+  stack?: TechStackItem[]
 }
 
-const { title, description, date } = Astro.props
+const { title, description, date, stack } = Astro.props
 ---
 
 <div
   class='absolute size-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-neutral-50'>
 </div>
-<time class='mb-2 text-sm text-neutral-400'>{date}</time>
-<h3 class='text-lg font-semibold text-sky-300 mb-1'>
-  {title}
-</h3>
-<p class='text-pretty text-neutral-200'>
-  {description}
-</p>
+<article>
+  <time class='mb-2 text-sm text-neutral-400'>{date}</time>
+  <h3 class='text-lg font-semibold text-sky-300 mb-1'>
+    {title}
+  </h3>
+  <p class='text-pretty text-neutral-200'>
+    {description}
+  </p>
+  <ul class='flex gap-4 mt-3'>{stack?.map(stackItem => (
+    <li>
+      <Badge title={stackItem.name} class={stackItem.class}>
+        <stackItem.icon class='size-5' />
+      </Badge>
+    </li>
+  ))}</ul>
+</article>
