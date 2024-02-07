@@ -53,8 +53,11 @@
   "ABOUT_ME": {
     "SECTION_ID": "about-me",
     "SECTION_TITLE": "About Me",
-    "ABOUT_1": "I took my first steps in programming in 2019 while still in school. In 2021, after graduating, I focused my steps towards web development.",
-    "ABOUT_2": "In 2023, I got my first job as a developer in a high-level company in Colombia, where I contributed to several projects, learned from amazing people, and had the opportunity to work with an international client.",
-    "ABOUT_3": "My goal is to continue growing in the world of web development, facing new challenges that allow me to unleash my creativity and share knowledge with others, developing and disseminating in the Hispanic community."
+    "ABOUT_1": "I took my first steps in programming in 2019 while still in school. In 2021, after graduating, ",
+    "ABOUT_1_HIGHLIGHT": "I focused my steps towards web development.",
+    "ABOUT_2": "In 2023, I got my first job as a developer in a high-level company in Colombia, where I contributed to several projects, learned from amazing people, ",
+    "ABOUT_2_HIGHLIGHT": "and had the opportunity to work with an international client.",
+    "ABOUT_3": "My goal is to continue growing in the world of web development, facing new challenges that allow me to unleash my creativity and share knowledge with others, ",
+    "ABOUT_3_HIGHLIGHT": "developing and disseminating in the Hispanic community."
   }
 }

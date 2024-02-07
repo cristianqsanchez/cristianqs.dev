@@ -8,7 +8,7 @@ const i18n = getI18N({ currentLocale })
 const aboutMe = i18n?.ABOUT_ME
 ---
 
-<section class='mb-48 [&>p]:text-neutral-200 [&>p]:mb-4'>
+<section class='mb-48 [&>p]:text-neutral-200 [&>p]:mb-4 [&>p>strong]:text-sky-300 [&>p>strong]:font-mono'>
   <h2
     id={aboutMe?.SECTION_ID}
     class='flex gap-4 items-center mb-8 text-4xl font-bold'
@@ -16,11 +16,14 @@ const aboutMe = i18n?.ABOUT_ME
   >
   <p>
     {aboutMe?.ABOUT_1}
+    <strong>{aboutMe?.ABOUT_1_HIGHLIGHT}</strong>
   </p>
   <p>
     {aboutMe?.ABOUT_2}
+    <strong>{aboutMe?.ABOUT_2_HIGHLIGHT}</strong>
   </p>
   <p>
     {aboutMe?.ABOUT_3}
+    <strong>{aboutMe?.ABOUT_3_HIGHLIGHT}</strong>
   </p>
 </section>

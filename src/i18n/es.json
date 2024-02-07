@@ -53,8 +53,11 @@
   "ABOUT_ME": {
     "SECTION_ID": "sobre-mi",
     "SECTION_TITLE": "Sobre mí",
-    "ABOUT_1": "Dí mis primeros pasos en la programación en 2019 cuando aún estaba en el colegio, en 2021 después de graduarme enfoqué mis pasos hacia el desarrollo web.",
-    "ABOUT_2": "En 2023 conseguí mi primer empleo como desarrollador en una empresa de gran nivel en Colombia, donde contribuí en varios proyectos, aprendí de personas increíbles y tuve la oportunidad de trabajar con un cliente internacional.",
-    "ABOUT_3": "Mi objetivo es continuar creciendo en el mundo del desarrollo web, enfrentar nuevos retos que me permitan desplegar mi creatividad y compartir conocimiento con los demás, desarrollando y divulgando en la comunidad hispana."
+    "ABOUT_1": "Dí mis primeros pasos en la programación en 2019 cuando aún estaba en el colegio, en 2021 después de graduarme ",
+    "ABOUT_1_HIGHLIGHT": "enfoqué mis pasos hacia el desarrollo web.",
+    "ABOUT_2": "En 2023 conseguí mi primer empleo como desarrollador en una empresa de gran nivel en Colombia, donde contribuí en varios proyectos, aprendí de personas increíbles y ",
+    "ABOUT_2_HIGHLIGHT": "tuve la oportunidad de trabajar con un cliente internacional.",
+    "ABOUT_3": "Mi objetivo es continuar creciendo en el mundo del desarrollo web, enfrentar nuevos retos que me permitan desplegar mi creatividad y compartir conocimiento con los demás, ",
+    "ABOUT_3_HIGHLIGHT": "desarrollando y divulgando en la comunidad hispana."
   }
 }
