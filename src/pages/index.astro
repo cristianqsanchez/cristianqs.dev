@@ -9,11 +9,9 @@ import { getI18N } from 'src/i18n'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
-
-const main = i18n?.MAIN
 ---
 
-<Layout title={main?.WEB_TITLE} description={main?.WEB_DESCRIPTION}>
+<Layout>
   <main class='grid place-content-center max-w-prose m-8 md:m-0'>
     <section class='grid min-h-dvh place-content-center'>
       <h1 class='text-5xl font-extrabold'

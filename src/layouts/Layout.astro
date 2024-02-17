@@ -1,74 +1,20 @@
 ---
-import '@fontsource/geist-sans/400.css'
-import '@fontsource/geist-sans/500.css'
-import '@fontsource/geist-sans/600.css'
-import '@fontsource/geist-sans/700.css'
-import '@fontsource/geist-sans/800.css'
 import Navbar from '@components/navbar.astro'
+import BaseLayout from './BaseLayout.astro'
 import { getI18N } from 'src/i18n'
-import { ViewTransitions } from 'astro:transitions'
+import OgMetaTags from '@components/og-meta-tags.astro'
 
-interface Props {
-  title?: string
-  description?: string
-}
-
-const { title, description } = Astro.props
 const { currentLocale } = Astro
 
 const i18n = getI18N({ currentLocale })
 const main = i18n?.MAIN
 ---
 
-<!doctype html>
-<html lang={currentLocale}>
-  <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content={description} />
-    <meta name='viewport' content='width=device-width' />
-
-    <!-- Facebook Meta Tags -->
-    <meta property='og:url' content={main?.SITE_URL} />
-    <meta property='og:type' content='website' />
-    <meta property='og:title' content={main?.WEB_TITLE} />
-    <meta property='og:description' content={main?.WEB_DESCRIPTION} />
-    <meta
-      property='og:image'
-      content={`${main?.SITE_URL}${main?.OG_IMAGE_URL}`}
-    />
-
-    <!-- Twitter Meta Tags -->
-    <meta name='twitter:card' content='summary_large_image' />
-    <meta property='twitter:domain' content={main?.SITE_URL} />
-    <meta property='twitter:url' content={main?.SITE_URL} />
-    <meta name='twitter:title' content={main?.WEB_TITLE} />
-    <meta name='twitter:description' content={main?.WEB_DESCRIPTION} />
-    <meta
-      name='twitter:image'
-      content={`${main?.SITE_URL}${main?.OG_IMAGE_URL}`}
-    />
-
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
-    <ViewTransitions />
-  </head>
-  <body
-    class='grid justify-center min-h-screen min-w-[100dvw] px-8 overflow-x-hidden bg-neutral-950 bg-[radial-gradient(ellipse_100%_100%_at_50%_-80%,rgba(150,150,250,0.7),rgba(255,255,255,0))]'>
-    <Navbar />
-    <slot />
-  </body>
-</html>
-<style is:global>
-  html {
-    font-family: 'Geist Sans', system-ui, sans-serif;
-    color-scheme: dark;
-    scroll-behavior: smooth;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
-</style>
+<BaseLayout
+  title={main?.WEB_TITLE}
+  description={main?.WEB_DESCRIPTION}
+  class='bg-neutral-950 bg-[radial-gradient(ellipse_100%_100%_at_50%_-80%,rgba(150,150,250,0.7),rgba(255,255,255,0))]'>
+  <OgMetaTags slot='head' />
+  <Navbar />
+  <slot />
+</BaseLayout>
