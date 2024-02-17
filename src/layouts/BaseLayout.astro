@@ -1,0 +1,48 @@
+---
+import '@fontsource/geist-sans/400.css'
+import '@fontsource/geist-sans/500.css'
+import '@fontsource/geist-sans/600.css'
+import '@fontsource/geist-sans/700.css'
+import '@fontsource/geist-sans/800.css'
+import { ViewTransitions } from 'astro:transitions'
+
+interface Props {
+  title?: string
+  description?: string
+  class?: string
+}
+
+const { title, description } = Astro.props
+const { currentLocale } = Astro
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content={description} />
+    <meta name='viewport' content='width=device-width' />
+    <slot name='head' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body
+    class={`grid justify-center min-h-screen max-w-[100dvw] px-8 overflow-x-hidden ${Astro.props.class}`}>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  html {
+    font-family: 'Geist Sans', system-ui, sans-serif;
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>
