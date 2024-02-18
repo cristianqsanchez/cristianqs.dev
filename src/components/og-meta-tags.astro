@@ -1,0 +1,26 @@
+---
+import { getI18N } from 'src/i18n'
+
+const { currentLocale } = Astro
+
+const i18n = getI18N({ currentLocale })
+const main = i18n?.MAIN
+
+// function to find properties by scope
+// ({ scope }) => i18n.scope
+---
+
+<!-- Facebook Meta Tags -->
+<meta property='og:url' content={main?.SITE_URL} />
+<meta property='og:type' content='website' />
+<meta property='og:title' content={main?.WEB_TITLE} />
+<meta property='og:description' content={main?.WEB_DESCRIPTION} />
+<meta property='og:image' content={`${main?.SITE_URL}${main?.OG_IMAGE_URL}`} />
+
+<!-- Twitter Meta Tags -->
+<meta name='twitter:card' content='summary_large_image' />
+<meta property='twitter:domain' content={main?.SITE_URL} />
+<meta property='twitter:url' content={main?.SITE_URL} />
+<meta name='twitter:title' content={main?.WEB_TITLE} />
+<meta name='twitter:description' content={main?.WEB_DESCRIPTION} />
+<meta name='twitter:image' content={`${main?.SITE_URL}${main?.OG_IMAGE_URL}`} />
